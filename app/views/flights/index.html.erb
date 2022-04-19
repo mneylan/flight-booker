@@ -1,0 +1,43 @@
+<h1 class="title">Flight Booker</h1>
+
+<% if @pars.to_s.length > 2 && @flights_available.count < 1 %>
+
+  <div class="error-container">
+    <div class="error-inner-container">
+      <span>No flights matching the criteria. Please try another search.</span>
+    </div>
+  </div>
+
+<% end %>
+
+<div class="main-container">
+  <div class="search-container">
+    <%= form_with(url: "/flights", method: "get") do |f| %>
+
+      <%= f.label "Departure Airport", class: "search-label" %>
+      <%= f.select(:start_airport_id, options_for_select(@departures, params[:start_airport_id]), {}, {class: "search-select"})  %>
+
+      <%= f.label "Arrival Airport", class: "search-label" %>
+      <%= f.select(:end_airport_id, options_for_select(@arrivals, params[:end_airport_id]), {}, {class: "search-select"})  %>
+
+      <%= f.label "Passengers", class: "search-label" %>
+      <%= f.select(:passengers, options_for_select([1, 2, 3, 4]), {}, {class: "search-select"})  %>
+
+      <%= f.label "Date", class: "search-label" %>
+      <%= f.date_field :start_date, value: params[:start_date], min: "2020-09-01", max: "2020-09-10", class: "search-select", required: true %>
+
+      <%= submit_tag("Search", class: "search-submit") %>
+
+    <% end %>
+  </div>
+
+  <% if @flights_available.count > 0 %>
+
+    <%= render partial: 'results' %>
+
+  <% end %>
+
+  
+
+</div>
+

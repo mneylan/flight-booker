@@ -1,0 +1,27 @@
+Flight.departure_airport.code
+
+@airport_options = Airport.all.map { |u| [u.location, u.id] }
+
+date_select(method, options = {}, html_options = {}) 
+
+<input type="date" min="2020-09-01" max="2020-09-10">
+
+date_field("user", "born_on", min: "2014-05-20")
+
+    @pars = params
+
+  
+
+  <% if @pars %>
+<div>
+<%= @pars %>
+</div
+<% end %>
+
+<% @flights_available.each do |f| %>
+        <h2>
+        <%= f %>
+        </h2>
+      <% end %>
+
+Flight.where("start_airport_id = #{start_id} and end_airport_id = #{end_id} and start_date = #{date}")

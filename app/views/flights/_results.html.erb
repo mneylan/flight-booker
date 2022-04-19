@@ -1,0 +1,47 @@
+<div class="results-container">
+      <div class="results-title-container">
+        <h2 class="results-title">Flights Available</h2>
+      </div>
+
+      <%= form_with(url: "/bookings/new", method: "get") do |form| %>
+        <% @flights_available.each do |f| %>
+
+          <div class="results-row">
+            <%= form.radio_button :selected_flight, "select", required: true %>
+            <%= form.hidden_field :start_date, :value => f.start_date %>
+            
+            <span>
+            <%= f.start_date %>
+            </span>
+
+            <span>
+            <%= form.hidden_field :start_airport_id, :value => f.start_airport_id %>
+            <%= f.departure_airport.code %>
+            </span>
+
+            <span> ==> </span>
+
+            <span>
+            <%= form.hidden_field :end_airport_id, :value => f.end_airport_id %>
+            <%= f.arrival_airport.code %>
+            </span>
+
+            <%= form.hidden_field :flight_id, :value => f.id %>
+
+            <%= form.hidden_field :passengers, :value => params[:passengers] %>
+
+            <span>
+            <%= form.hidden_field :flight_duration_minutes, :value => f.flight_duration_minutes %>
+            <%= minutes_to_hours(f.flight_duration_minutes) %>
+            </span>
+
+
+          </div>
+
+        <% end %>
+
+        <%= submit_tag "Select Flight", class: "search-submit" %>
+
+      <% end %>
+
+  </div>

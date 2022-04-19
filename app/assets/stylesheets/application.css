@@ -13,3 +13,266 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #334564;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.title {
+  margin-top: 25px;
+  color: #BBF3B7;
+  text-align: center;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 2.5rem;
+  
+  
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 85px;
+  gap: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+
+.search-label, .search-select {
+  display: block;
+}
+
+.search-label {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.search-select {
+  margin-bottom: 20px;
+  width: 175px;
+  height: 20px;
+  background-color: #DBDBDB;
+}
+
+.search-submit {
+  display: block;
+   
+  margin: 0 auto;
+  margin-top: 30px; 
+  color: black;
+  background-color: #B7DAA0;
+  padding: 5px 30px;
+  border-radius: 10px;
+  
+}
+
+.results-row > span {
+  margin: 0 5px;
+}
+
+.results-title {
+  display: block;
+  margin: 0 auto;
+  font-weight: 300;
+  margin-bottom: 20px
+}
+
+.results-container {
+  color: white;
+}
+
+.results-title-container {
+  text-align: center;
+}
+
+.flex-item2 {
+  position: relative;
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+}
+
+.flight-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: solid 1px black
+}
+
+.params {
+  margin-top: 50px;
+  font-size: 20px;
+  color: white;
+}
+
+.booking-header {
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 1.75rem;
+  
+  text-align: center;
+}
+
+.booking-container {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.flight-detail {
+  line-height: 2;
+  
+}
+
+.flight-detail > span {
+  margin-left: 5px;
+  color: #BBF3B7;
+  font-size: 1.2rem;
+}
+
+.passenger-header {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 1.75rem;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.passenger-section {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.booking-name {
+  margin: 0 5px;
+  color: white;
+}
+
+.form-field {
+  padding: 3px;
+  background-color: rgb(139, 158, 178);
+  color: rgb(8, 8, 8);
+  font-size: 15px;
+  border-radius: 3px;
+  width: 306px;
+}
+
+.search-submit:hover {
+  background-color: #9cfc93;
+  box-shadow: 2px 3px;
+}
+
+.thank-you {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  line-height: 1.2;
+  font-family: 'Trebuchet MS', Arial, sans-serif
+}
+
+.ticket-container {
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 20px 0px;
+  height: 400px;
+  max-width: 800px;
+  border-radius: 7px;
+  background-color: #728099;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  line-height: 2;
+  font-family: 'Trebuchet MS', Arial, sans-serif
+}
+
+.ticket-container > * {
+  color: white;
+}
+
+.grid-1 {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.passengers {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.grid-4 {
+  margin-bottom: 30px;
+}
+
+.airplane-container {
+  height: 100%;
+  width: 100%;
+}
+
+.airplane-container > svg {
+  height: 100%;
+}
+
+.passengers {
+  font-size: 26px;
+}
+
+.passenger-form-item {
+  display: inline-block;
+}
+
+.error-container {
+  position: absolute;
+  top: 112px;
+  width: calc(100% - 40px);
+  text-align: center;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: rgb(240, 180, 180);
+  font-size: 20px;
+}
+
+.error-inner-container {
+  margin: 0 auto;
+  width: fit-content;
+  
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: #4c6795;
+}
+
+
+@media (max-width: 795px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 60px; */
+    gap: 60px;
+  }
+
+  .passenger-form-item {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+}
+

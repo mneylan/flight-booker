@@ -1,0 +1,55 @@
+<h1 class="title">Flight Booker</h1>
+
+<div class="booking-container">
+  <div class="booking-header">Flight Details</div>
+
+
+  <div class="flight-detail">Departure Airport:
+    <span>
+      <%= @selected_flight.departure_airport.code %>
+    </span>
+  </div>
+  
+  <div class="flight-detail">Arrival Airport:
+    <span>
+      <%= @selected_flight.arrival_airport.code %>
+    </span>
+  </div>
+
+  <div class="flight-detail">Date:
+    <span>
+      <%= @selected_flight.start_date %>
+    </span>
+  </div>
+
+  <div class="flight-detail">Duration:
+    <span>
+      <%= minutes_to_hours(@selected_flight.flight_duration_minutes) %>
+    </span>
+  </div>
+
+
+</div>
+  
+<div class="passenger-header">Passenger Information</div>
+
+<%= form_with model: @booking do |f| %>
+  
+  <%= f.hidden_field :flight_id, :value => params[:flight_id] %>
+  <%= f.fields_for :passengers do |passengers_form| %>
+    <div class="passenger-section">
+      <div class="passenger-form-item">
+        <%= passengers_form.label "Name:", class: "booking-name" %>
+        <%= passengers_form.text_field :name, class: "form-field", required: true %>
+      </div>
+      <div class="passenger-form-item">
+        <%= passengers_form.label "Email:", class: "booking-name" %>
+        <%= passengers_form.email_field :email, class: "form-field", required: true %>
+      </div>
+    </div>
+  <% end %>
+
+<%= f.submit "Confirm", class: "search-submit" %>
+
+<% end %>
+

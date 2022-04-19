@@ -1,0 +1,22 @@
+<%= form_with(url: "/flights", method: "get") do |f| %>
+  <div class="search-field">
+    <%= f.label "Departure Airport:" %>
+    <%= f.select(:start_airport_id, options_for_select(@departures, params[:start_airport_id])) %>
+  </div>
+  
+  <div class="search-field">
+    <%= f.label "Arrival Airport:" %>
+    <%= f.select(:end_airport_id, options_for_select(@arrivals, params[:end_airport_id])) %>
+  </div> 
+
+  <div class="search-field">
+    <%= f.label "Passengers:" %>
+    <%= f.select(:passengers, options_for_select([1, 2, 3, 4])) %>
+  </div>
+
+  <div class="search-field">
+    <%= f.label "Date:" %>
+    <%= f.date_field :start_date, value: params[:start_date], min: "2020-09-01", max: "2020-09-10", required: true %>
+  </div>
+  <%= submit_tag("Search") %>
+<% end %>
