@@ -12,34 +12,37 @@
 
 ActiveRecord::Schema.define(version: 2022_04_03_173950) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "airports", force: :cascade do |t|
-    t.string "code"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.text "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "flight_id"
-    t.integer "passenger_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "flight_id"
+    t.bigint "passenger_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "flights", force: :cascade do |t|
-    t.integer "start_airport_id"
-    t.integer "end_airport_id"
-    t.integer "flight_duration_minutes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table "flights", id: :bigint, default: nil, force: :cascade do |t|
+    t.bigint "start_airport_id"
+    t.bigint "end_airport_id"
+    t.bigint "flight_duration_minutes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.date "start_date"
   end
 
   create_table "passengers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "booking_id"
+    t.text "name"
+    t.text "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.bigint "booking_id"
   end
 
 end
