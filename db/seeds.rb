@@ -8,26 +8,108 @@
 
 
 
-# Airport.create(code: "SFO") 119
-# Airport.create(code: "JFK") 120
-# Airport.create(code: "MDW") 121
-# Airport.create(code: "DEN") 122
-# Airport.create(code: "OMA") 123
-# Airport.create(code: "MIA") 124
-# Airport.create(code: "YVR") 125
-# Airport.create(code: "MCI") 126
-# Airport.create(code: "PDX") 127
+Airport.create(code: "SFO") 
+Airport.create(code: "JFK") 
+Airport.create(code: "MDW") 
+Airport.create(code: "DEN") 
+Airport.create(code: "OMA") 
+Airport.create(code: "MIA") 
+Airport.create(code: "YVR") 
+Airport.create(code: "MCI") 
+Airport.create(code: "PDX") 
 # departure airport must exist, arrival airport must exist
 
 
-# Flight.create!(start_airport_id: 119, end_airport_id: 120, flight_duration_minutes: 345, start_date: "1/9/2020")
-#  Flight.create!(start_airport_id: 120, end_airport_id: 121, flight_duration_minutes: 270, start_date: "1/10/2020")
-#  Flight.create!(start_airport_id: 121, end_airport_id: 122, flight_duration_minutes: 170, start_date: "1/11/2020")
-#  Flight.create!(start_airport_id: 122, end_airport_id: 123, flight_duration_minutes: 90, start_date: "1/12/2020")
-#  Flight.create!(start_airport_id: 123, end_airport_id: 124, flight_duration_minutes: 230, start_date: "1/13/2020")
-#  Flight.create!(start_airport_id: 124, end_airport_id: 125, flight_duration_minutes: 540, start_date: "1/14/2020")
-#  Flight.create!(start_airport_id: 125, end_airport_id: 126, flight_duration_minutes: 390, start_date: "1/15/2020")
-#  Flight.create!(start_airport_id: 126, end_airport_id: 127, flight_duration_minutes: 330, start_date: "1/16/2020")
-#  Flight.create!(start_airport_id: 120, end_airport_id: 124, flight_duration_minutes: 210, start_date: "1/17/2020")
-#  Flight.create!(start_airport_id: 123, end_airport_id: 127, flight_duration_minutes: 330, start_date: "1/18/2020")
+# def create_data
+# numbers = [119, 120, 121, 122, 123, 124, 125, 126]
+# dates = ["2020-09-02" "2020-09-03" "2020-09-04" "2020-09-05" "2020-09-06" "2020-09-07" "2020-09-08" "2020-09-09", "2020-09-10" ]
+# duration = [345, 270, 170, 90, 230, 540, 390, 330]
+# i = 0
+# j = 0
+# while i < 8
+#   puts "Flight.create!(start_airport_id: #{numbers[i]}, end_airport_id: #{numbers[i] + 1}, flight_duration_minutes: #{duration[i]}, start_date: '2020-09-10')"
 
+#   i += 1
+# end
+# end
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-02')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-02')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-03')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-03')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-04')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-04')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-05')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-05')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-06')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-06')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-07')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-07')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-08')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-08')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-09')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-09')
+
+Flight.create!(start_airport_id: 1, end_airport_id: 2, flight_duration_minutes: 345, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 2, end_airport_id: 3, flight_duration_minutes: 270, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 3, end_airport_id: 4, flight_duration_minutes: 170, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 4, end_airport_id: 5, flight_duration_minutes: 90, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 5, end_airport_id: 6, flight_duration_minutes: 230, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 6, end_airport_id: 7, flight_duration_minutes: 540, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 7, end_airport_id: 8, flight_duration_minutes: 390, start_date: '2020-09-10')
+Flight.create!(start_airport_id: 8, end_airport_id: 9, flight_duration_minutes: 330, start_date: '2020-09-10')
