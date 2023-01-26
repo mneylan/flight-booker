@@ -24,7 +24,7 @@
       <%= f.select(:passengers, options_for_select([1, 2, 3, 4]), {}, {class: "search-select"})  %>
 
       <%= f.label "Date", class: "search-label" %>
-      <%= f.date_field :start_date, value: params[:start_date], min: "2020-09-01", max: "2020-09-10", class: "search-select", required: true %>
+      <%= f.date_field :start_date, value: params[:start_date], min: "2020-09-02", max: "2020-09-10", class: "search-select", required: true %>
 
       <%= submit_tag("Search", class: "search-submit") %>
 
